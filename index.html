@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Colores</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="color-display">
+            <h1 class="title">🎨 Generador de Colores</h1>
+            <p class="subtitle">Haz clic en el botón para generar un color aleatorio</p>
+            
+            <div class="color-circle" id="colorCircle">
+                <div class="color-code" id="colorCode">#667EEA</div>
+            </div>
+            
+            <div class="color-info">
+                <div class="info-item">
+                    <span class="label">RGB:</span>
+                    <span id="rgbValue">rgb(102, 126, 234)</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">HSL:</span>
+                    <span id="hslValue">hsl(228, 76%, 66%)</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">CMYK:</span>
+                    <span id="cmykValue">56%, 46%, 0%, 8%</span>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-generate" id="generateBtn">
+                    <span class="btn-icon">✨</span>
+                    Generar Color
+                </button>
+                <button class="btn btn-copy" id="copyBtn">
+                    <span class="btn-icon">📋</span>
+                    Copiar Código
+                </button>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h2><span class="icon">📚</span> Últimos Colores</h2>
+            <div class="history-grid" id="historyGrid">
+                <!-- Los colores se agregarán aquí dinámicamente -->
+            </div>
+            <button class="btn btn-clear" id="clearHistory">
+                <span class="btn-icon">🗑️</span>
+                Limpiar Historial
+            </button>
+        </div>
+
+        <div class="shortcuts">
+            <h3><span class="icon">⚡</span> Atajos Rápidos</h3>
+            <div class="shortcut-list">
+                <div class="shortcut-item">
+                    <span class="key">Espacio</span>
+                    <span class="desc">Generar nuevo color</span>
+                </div>
+                <div class="shortcut-item">
+                    <span class="key">Ctrl+C</span>
+                    <span class="desc">Copiar código</span>
+                </div>
+                <div class="shortcut-item">
+                    <span class="key">Alt+G</span>
+                    <span class="desc">Generar color</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-text">Código copiado al portapapeles</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
